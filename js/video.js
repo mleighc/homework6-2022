@@ -14,14 +14,26 @@ document.querySelector("#pause").addEventListener("click", function () {
 });
 
 document.querySelector("#slower").addEventListener("click", function () {
-	video.playbackRate = 0.5;
+	video.playbackRate -= 0.5;
 });
 
 document.querySelector("#faster").addEventListener("click", function () {
-	video.playbackRate = 1.5;
+	video.playbackRate += 0.5;
 });
 
 document.querySelector("#skip").addEventListener("click", function () {
-	video.currentTime += 10.0
+	video.currentTime += 15.0
+});
+
+document.querySelector("#mute").addEventListener("click", function () {
+	video.muted = true;
+});
+
+document.querySelector("#vintage").addEventListener("click", function () {
+	video.classList.add('oldSchool')
+});
+
+document.querySelector("#orig").addEventListener("click", function () {
+	video.classList.remove('oldSchool')
 });
 
