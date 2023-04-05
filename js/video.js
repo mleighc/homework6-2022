@@ -33,8 +33,9 @@ document.querySelector("#skip").addEventListener("click", function () {
 let muteBtn = document.querySelector("#mute")
 muteBtn.addEventListener("click", function () {
 	video.muted = !video.muted;
-	// if (video.muted == true) { muteBtn.innerHTML = 'Unmute' } elif(video.muted == false) { muteBtn.innerHTML = 'Mute' }
+	video.muted == true ? muteBtn.innerHTML = 'Unmute' : muteBtn.innerHTML = 'Mute'
 });
+
 
 document.querySelector("#vintage").addEventListener("click", function () {
 	video.classList.add('oldSchool')
